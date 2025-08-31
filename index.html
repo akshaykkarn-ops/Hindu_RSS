@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hindu RSS Reader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>The Hindu RSS Reader</h1>
+    <button id="refreshBtn" class="btn">Refresh</button>
+  </header>
+
+  <section class="controls">
+    <label class="ctl">
+      Category
+      <select id="categorySelect">
+        <option value="main">Main</option>
+        <option value="national">National</option>
+        <option value="international">International</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+        <option value="opinion">Opinion</option>
+        <option value="entertainment">Entertainment</option>
+      </select>
+    </label>
+
+    <label class="ctl">
+      Search
+      <input id="searchInput" placeholder="keywords"/>
+    </label>
+
+    <label class="ctl">
+      Sort by date
+      <select id="sortSelect">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+      </select>
+    </label>
+  </section>
+
+  <section id="statusBar">
+    <span id="loading" hidden>Loading…</span>
+    <span id="error" hidden></span>
+    <span id="count" hidden></span>
+  </section>
+
+  <main id="articlesContainer" class="grid"></main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
